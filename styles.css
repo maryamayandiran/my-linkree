@@ -1,0 +1,78 @@
+/* Base styles: white background, black text */
+:root{
+  --bg: #ffffff;
+  --bg-2: #f6f2ff;
+  --text: #0f172a;
+  --muted: #6b6b6b;
+  --accent: #f3f3f3;
+  --btn-start: #7c3aed;
+  --btn-end: #06b6d4;
+  --glass: rgba(255,255,255,0.65);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(135deg, var(--bg-2) 0%, #e6f7ff 50%, #fff5f0 100%);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+.container{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:20px;
+  padding:32px;
+  max-width:520px;
+  margin:0 auto;
+  background:var(--glass);
+  border-radius:16px;
+  box-shadow:0 10px 30px rgba(16,24,40,0.08);
+  backdrop-filter:blur(6px);
+  border:1px solid rgba(255,255,255,0.6);
+}
+
+.avatar{
+  width:120px;
+  height:120px;
+  border-radius:999px;
+  object-fit:cover;
+  /* center the face — adjust if needed: 'center 40%' moves face up */
+  object-position:center 40%;
+  border:3px solid #ffffff;
+  box-shadow:0 6px 18px rgba(16,24,40,0.12), 0 2px 6px rgba(7,89,133,0.06);
+  transition:transform .18s ease, box-shadow .18s ease;
+}
+
+.name{font-size:1.6rem;margin:0;color:var(--text);letter-spacing:0.2px}
+.bio{margin:0;color:#000000;text-align:center;max-width:36rem}
+
+.links{display:flex;flex-direction:column;gap:12px;width:100%;max-width:420px;margin-top:8px}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:12px 18px;
+  color:#ffffff;
+  text-decoration:none;
+  border-radius:12px;
+  font-weight:700;
+  background:linear-gradient(90deg,var(--btn-start),var(--btn-end));
+  border:none;
+  box-shadow:0 6px 18px rgba(92,33,255,0.12);
+  transition:transform .14s ease, box-shadow .14s ease, opacity .14s ease;
+}
+
+.btn:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(92,33,255,0.14);opacity:0.98}
+.footer{margin-top:20px;color:var(--muted);font-size:0.95rem;font-weight:600}
+
+@media(min-width:640px){
+  .links{flex-direction:column}
+  .name{font-size:2rem}
+}
