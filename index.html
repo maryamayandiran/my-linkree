@@ -15,9 +15,9 @@
 
       <div class="links">
         <a class="btn" href="https://maryamayandiran.github.io/maryam-smm-portfolio/" target="_blank" rel="noopener">Portfolio</a>
-        <a class="btn" href="https://x.com/maryamonsocials?s=11" target="_blank" rel="noopener">Twitter</a>
+        <a class="btn" href="https://x.com/maryamonsocials" target="_blank" rel="noopener noreferrer" data-app-url="twitter://user?screen_name=maryamonsocials">Twitter/X</a>
         <a class="btn" href="https://www.linkedin.com/in/ayandiran-maryam-56062235a" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="btn" href="https://www.instagram.com/maryamonsocials_?stkn=MnF0MjZ5a3A5cXU0&utm_source=qr" target="_blank" rel="noopener">Instagram</a>
+        <a class="btn" href="https://www.instagram.com/maryamonsocials_" target="_blank" rel="noopener noreferrer" data-app-url="instagram://user?username=maryamonsocials_">Instagram</a>
       </div>
 
       <footer>
@@ -26,5 +26,23 @@
         </div>
       </footer>
     </main>
+    <script>
+      (function(){
+        document.addEventListener('click', function(e){
+          var a = e.target.closest && e.target.closest('a[data-app-url]');
+          if(!a) return;
+          var appUrl = a.getAttribute('data-app-url');
+          var webUrl = a.href;
+          var now = Date.now();
+          // try open the native app
+          window.location = appUrl;
+          // fallback to web after short delay
+          setTimeout(function(){
+            if(Date.now() - now < 1200) window.location = webUrl;
+          }, 800);
+          e.preventDefault();
+        }, false);
+      })();
+    </script>
   </body>
 </html>
