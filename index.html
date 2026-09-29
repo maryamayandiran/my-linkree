@@ -3,28 +3,38 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Linkree</title>
+    <meta name="theme-color" content="#ffffff" />
+    <title>Maryam Ayandiran - Links</title>
     <link rel="stylesheet" href="styles.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   </head>
   <body>
-    <main class="container">
-      <img class="avatar" src="image/my picture.jpeg" alt="my picture" />
-      <h1 class="name">Maryam</h1>
-      <p class="bio">I help businesses and founders turn QUIET pages into pages people NOTICE </p>
+    <main class="page">
+      <section class="profile" aria-label="Maryam's profile">
+        <img class="avatar" src="image/my picture.jpeg" alt="Portrait of Maryam" />
+        <p class="role">SOCIAL MEDIA MANAGER</p>
+        <h1>Hi, I'm Maryam.</h1>
+        <p class="bio">I help businesses and founders turn <strong>QUIET pages</strong> into pages people <strong>NOTICE</strong></p>
+      </section>
 
-      <div class="links">
-        <a class="btn" href="https://maryamayandiran.github.io/maryam-smm-portfolio/" target="_blank" rel="noopener">Portfolio</a>
-        <a class="btn" href="https://x.com/maryamonsocials" target="_blank" rel="noopener noreferrer" data-app-url="twitter://user?screen_name=maryamonsocials">Twitter/X</a>
-        <a class="btn" href="https://www.linkedin.com/in/ayandiran-maryam-56062235a" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="btn" href="https://www.instagram.com/maryamonsocials_" target="_blank" rel="noopener noreferrer" data-app-url="instagram://user?username=maryamonsocials_">Instagram</a>
-      </div>
+      <nav class="links" aria-label="Social and portfolio links">
+        <a class="primary" href="https://maryamayandiran.github.io/maryam-smm-portfolio/" target="_blank" rel="noopener noreferrer">
+          View my portfolio
+        </a>
+        <a class="social-link" href="https://x.com/maryamonsocials" target="_blank" rel="noopener noreferrer" data-app-url="twitter://user?screen_name=maryamonsocials">
+          <span class="social-name">X / Twitter</span><span class="social-handle">@maryamonsocials</span>
+        </a>
+        <a class="social-link" href="https://www.instagram.com/maryamonsocials_/" target="_blank" rel="noopener noreferrer" data-app-url="instagram://user?username=maryamonsocials_">
+          <span class="social-name">Instagram</span><span class="social-handle">@maryamonsocials_</span>
+        </a>
+        <a class="social-link" href="https://www.linkedin.com/in/ayandiran-maryam-56062235a" target="_blank" rel="noopener noreferrer">
+          <span class="social-name">LinkedIn</span><span class="social-handle">Let's connect</span>
+        </a>
+      </nav>
 
-      <footer>
-         <div class="footer-container">
-            <p>&copy;Maryam 2026</p>
-        </div>
-      </footer>
+      <footer class="footer">Available for remote work</footer>
     </main>
     <script>
       (function(){
